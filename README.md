@@ -48,18 +48,18 @@ Generate dialogue in that style, improving over generic GPT behavior
 
 ## How can we make the model genre aware?
 
-# 🧩 Step 1: Build a Genre-Labeled RAG Corpus
+### 🧩 Step 1: Build a Genre-Labeled RAG Corpus
 Even though your user doesn’t provide a genre, your system should label it behind the scenes:
 
-# 🧠 Step 2: Auto-Infer Genre from Scene Input (Simple Model)
+### 🧠 Step 2: Auto-Infer Genre from Scene Input (Simple Model)
 Use a zero-shot classification model to auto-detect genre from the user’s input.
 
-# 🔍 Step 3: Filter RAG Retrieval by Genre
+### 🔍 Step 3: Filter RAG Retrieval by Genre
 Once you infer the genre:
 Query only that genre subset of your FAISS index
 Or store multiple FAISS indices (1 per genre) and select the right one
 
-# ✍️ Step 4: Build a Prompt Like This:
+### ✍️ Step 4: Build a Prompt Like This:
 ''' text
 Copy
 Edit
