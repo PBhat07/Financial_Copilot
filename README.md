@@ -77,5 +77,7 @@ Write 2–3 lines of emotionally fitting dialogue in screenplay style.  '''
 
 ## Potential Work Flow
 ![image](https://github.com/user-attachments/assets/eb721809-b975-446b-bd1b-69aa6fd11a2d)
+![image](https://github.com/user-attachments/assets/9499d7bd-3319-4004-8679-4b6e201c41e7)
+
 
 
