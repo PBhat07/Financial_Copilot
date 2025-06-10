@@ -75,5 +75,7 @@ Reference Dialogues (from similar scenes):
 Write 2–3 lines of emotionally fitting dialogue in screenplay style.  '''
 
 
+## Potential Work Flow
+![image](https://github.com/user-attachments/assets/eb721809-b975-446b-bd1b-69aa6fd11a2d)
 
 
