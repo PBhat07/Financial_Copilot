@@ -34,3 +34,6 @@ This repository demonstrates an augmented LLM setup combining chat interfaces wi
 <pre>
 !python rag_pipeline.py </pre>
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1GIjCBMroWHaHUpppp_-9eMNgjhQ-hjCG?usp=sharing)
+
+
