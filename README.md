@@ -31,6 +31,6 @@ This repository demonstrates an augmented LLM setup combining chat interfaces wi
  print("Libraries installed.") ``` </pre>
 
 ## Run rag_pipeline.py file
-<pre>```
-!python rag_pipeline.py ```</pre>
+<pre>
+!python rag_pipeline.py </pre>
 
