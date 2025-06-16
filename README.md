@@ -24,7 +24,8 @@ This repository demonstrates an augmented LLM setup combining chat interfaces wi
 
 ## Install necessary libraries for RAG
 
-''' print("Installing RAG pipeline libraries...")
+### print("Installing RAG pipeline libraries...")
+'''
 !pip install -qqq langchain pypdf faiss-cpu # Core LangChain, PDF loader, FAISS
 !pip install -qqq "langchain_google_genai" "google-generativeai" # For Google Gemini embeddings and LLM
 !pip install -qqq "langchain_community" "langchain_core" # Ensure core and community packages are up to date
