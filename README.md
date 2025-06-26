@@ -1,4 +1,6 @@
 
+Why FastAPI?
+
 # FLASK VS GRADIO
 
 | Feature         | **Flask**                      | **Gradio**                            |
