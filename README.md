@@ -32,30 +32,32 @@ While not fully MCP-spec-compliant (due to FastAPI’s HTTP approach), this serv
 
 ### ⚙️ Setup & Running
 
-1. Clone the repo and enter directory
+  1. Clone the repo and enter directory
 
-git clone https://github.com/yourusername/financial_co_pilot.git
-cd financial_api
+     git clone https://github.com/yourusername/financial_co_pilot.git
 
-2. Create and activate virtual environment
+     cd financial_api
 
-python -m venv venv
-venv\Scripts\activate    # Windows 
+  2. Create and activate virtual environment
 
-3. Install dependencies
+     python -m venv venv
 
-pip install -r requirements.txt
+     venv\Scripts\activate    # Windows 
 
-4. Setup environment variables
-(Copy .env.example to .env and fill in your API keys for OpenAI, Alpha Vantage, NewsAPI, etc.)
+  3. Install dependencies
 
-cp .env.example .env
+     pip install -r requirements.txt
+
+  4. Setup environment variables
+     (Copy .env.example to .env and fill in your API keys for OpenAI, Alpha Vantage, NewsAPI, etc.)
+
+     cp .env.example .env
 
 5. Run the FastAPI server
 
-uvicorn api_server:app --reload
+     uvicorn api_server:app --reload
 
-Open http://localhost:8000/docs to explore the automatically generated interactive API docs (Swagger UI).
+    Open http://localhost:8000/docs to explore the automatically generated interactive API docs (Swagger UI).
 
 
 
