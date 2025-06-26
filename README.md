@@ -60,44 +60,5 @@ While not fully MCP-spec-compliant (due to FastAPI’s HTTP approach), this serv
     Open http://localhost:8000/docs to explore the automatically generated interactive API docs (Swagger UI).
 
 
-## 🧭 Architecture Overview
-
-
-+---------------------+ POST /ask (JSON) +----------------------+
-| | -----------------------------> | |
-| Client / LLM | | FastAPI MCP |
-| (sends question) | | API Server |
-| | | |
-+---------------------+ +----------+-----------+
-|
-| Extract question from JSON
-|
-+------+-------+
-| |
-| Call RAG |
-| pipeline |
-| (qa_chain) |
-| |
-+------+-------+
-|
-RAG pipeline processes query,
-searches docs, generates answer
-|
-+------+-------+
-| |
-| Answer |
-| string / |
-| JSON |
-+------+-------+
-|
-| Return JSON response
-|
-+---------------------+ <---------------------------- +----------------------+
-| | | |
-| Client / LLM | | Response: |
-| (receives JSON) | | { |
-| | | "question": "...",|
-| | | "answer": "..." |
-+---------------------+ +----------------------+
 
 
