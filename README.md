@@ -42,7 +42,7 @@ While not fully MCP-spec-compliant (due to FastAPI’s HTTP approach), this serv
 
      python -m venv venv
 
-     venv\Scripts\activate    # Windows 
+     venv\Scripts\activate    
 
   3. Install dependencies
 
