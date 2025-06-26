@@ -1,7 +1,7 @@
 
 This project is part of a collaborative financial co-pilot application. Specifically, this branch implements the Multiple Context Protocol (MCP)-inspired API server using FastAPI — enabling modular, scalable interaction between an LLM client and real-time financial tools.
 
-###🚀 Overview
+### 🚀 Overview
 
 The financial_api service acts as an MCP-like backend built with FastAPI. It exposes multiple modular tools as HTTP endpoints, wrapping real APIs and Retrieval-Augmented Generation (RAG) pipelines. This setup allows an LLM-based client (e.g., LangChain + OpenAI) to dynamically query financial data and knowledge sources via a clear client-server architecture.
 
@@ -19,26 +19,18 @@ While not fully MCP-spec-compliant (due to FastAPI’s HTTP approach), this serv
 
 
 
-###🛠️ Tech Stack
+### 🛠️ Tech Stack
 
-Python 3.x
+     Python 3.x
 
-FastAPI
+     FastAPI
 
-LangChain
+     Retrieval-Augmented Generation (RAG) pipeline
 
-OpenAI API
-
-Alpha Vantage API (financial data)
-
-NewsAPI (financial news)
-
-Retrieval-Augmented Generation (RAG) pipeline
-
-uvicorn (ASGI server)
+     uvicorn (ASGI server)
 
 
-###⚙️ Setup & Running
+### ⚙️ Setup & Running
 
 1. Clone the repo and enter directory
 
