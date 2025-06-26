@@ -1,15 +1,64 @@
+This project is part of a collaborative financial co-pilot application. Specifically, this branch implements the Multiple Context Protocol (MCP)-inspired API server using FastAPI — enabling modular, scalable interaction between an LLM client and real-time financial tools.
 
-Why FastAPI?
+🚀 Overview
+The financial_api service acts as an MCP-like backend built with FastAPI. It exposes multiple modular tools as HTTP endpoints, wrapping real APIs and Retrieval-Augmented Generation (RAG) pipelines. This setup allows an LLM-based client (e.g., LangChain + OpenAI) to dynamically query financial data and knowledge sources via a clear client-server architecture.
 
-# FLASK VS GRADIO
+While not fully MCP-spec-compliant (due to FastAPI’s HTTP approach), this service mimics core MCP concepts:
 
-| Feature         | **Flask**                      | **Gradio**                            |
-| --------------- | ------------------------------ | ------------------------------------- |
-| Setup           | Manual routing, HTML templates | Plug-and-play, no HTML needed         |
-| Customizability | High (full control)            | Medium (but improving)                |
-| Time to build   | Slower                         | Much faster                           |
-| Ideal for       | Production-ready apps          | Prototypes, demos, portfolio projects |
-| Colab support   | Not native (needs `ngrok`)     | Fully supported                       |
+MCP Concept	         Implemented with FastAPI?	       Notes
+🧠 LLM at the center	        ✅	         LangChain + OpenAI LLM interacts as the client
+🔌 Tools as external modules	✅	         Each tool is a FastAPI route serving real financial APIs/RAG
+📡 Client-server architecture	✅	         FastAPI acts as server, LLM client sends requests
+🛰️ Real API integration	     ✅	          Calls Alpha Vantage, NewsAPI, and other financial data sources
+🔁 Modular and scalable	        ✅	         Easily add/remove API routes and RAG tools
+🧱 MCP SDK-level STDIO/JSON-RPC	❌	         Uses HTTP rather than JSON-RPC or STDIO
+🏷️ Official MCP label	         ❌	          Functionally similar but not MCP-spec-compliant
+
+
+🛠️ Tech Stack
+Python 3.x
+
+FastAPI
+
+LangChain
+
+OpenAI API
+
+Alpha Vantage API (financial data)
+
+NewsAPI (financial news)
+
+Retrieval-Augmented Generation (RAG) pipeline
+
+uvicorn (ASGI server)
+
+
+⚙️ Setup & Running
+1. Clone the repo and enter directory
+
+git clone https://github.com/yourusername/financial_co_pilot.git
+cd financial_api
+
+2. Create and activate virtual environment
+
+python -m venv venv
+venv\Scripts\activate    # Windows 
+
+3. Install dependencies
+
+pip install -r requirements.txt
+
+4. Setup environment variables
+(Copy .env.example to .env and fill in your API keys for OpenAI, Alpha Vantage, NewsAPI, etc.)
+
+cp .env.example .env
+
+5. Run the FastAPI server
+
+uvicorn api_server:app --reload
+
+Open http://localhost:8000/docs to explore the automatically generated interactive API docs (Swagger UI).
+
 
 
 
@@ -19,18 +68,6 @@ Why FastAPI?
 ![image](https://github.com/user-attachments/assets/9499d7bd-3319-4004-8679-4b6e201c41e7)
 
 
-## Install necessary libraries for RAG
-<pre> ```
- print("Installing RAG pipeline libraries...")
- !pip install -qqq langchain pypdf faiss-cpu # Core LangChain, PDF loader, FAISS 
- !pip install -qqq "langchain_google_genai" "google-generativeai" # Google Gemini embeddings and LLM 
- !pip install -qqq "langchain_community" "langchain_core" # Ensure core and community packages are up to date 
- print("Libraries installed.") ``` </pre>
 
-## Run rag_pipeline.py file
-<pre>
-!python rag_pipeline.py </pre>
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1GIjCBMroWHaHUpppp_-9eMNgjhQ-hjCG?usp=sharing)
 
 
