@@ -33,15 +33,12 @@ Financial Copilot is an advanced AI-powered financial analysis platform that com
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/financial-copilot.git
-   cd financial-copilot
+   git clone https://github.com/PBhat07/Financial_Copilot.git
+   cd Financial_Copilot
    ```
 
 2. **Set up the environment**
    ```bash
-   # Run the setup script to create directories
-   python setup_data.py
-   
    # Copy example environment file
    cp env.example .env
    
@@ -176,7 +173,7 @@ print(result['answer'])
 | `LLM_BACKEND` | LLM backend: `gemini` or `claude` | Yes |
 | `GOOGLE_API_KEY` | Google Gemini API key | For Gemini |
 | `ANTHROPIC_API_KEY` | Anthropic Claude API key | For Claude |
-| `EXTERNAL_API_URL` | External API server URL | Yes |
+| `EXTERNAL_API_URL` | External API server URL | Auto-detected |
 | `TWELVE_DATA_API_KEY` | Twelve Data API key | Yes |
 | `FMP_API_KEY` | Financial Modeling Prep API key | Yes |
 | `NEWS_API_KEY` | News API key | Yes |
@@ -190,10 +187,7 @@ print(result['answer'])
    python launch_api.py
    ```
 
-2. **Update your .env file** with the ngrok URL:
-   ```
-   EXTERNAL_API_URL=https://your-ngrok-url.ngrok-free.app
-   ```
+2. **The system will automatically detect the API URL** (localhost or ngrok)
 
 ## 🧪 Testing
 
@@ -213,6 +207,11 @@ python interactive_launcher.py
 # Choose option 1 for quick test or 2 for comprehensive test
 ```
 
+### System Test
+```bash
+python test_system.py
+```
+
 ## 📊 Performance
 
 Based on our testing with 15 complex queries:
@@ -230,7 +229,7 @@ Based on our testing with 15 complex queries:
 1. **Import Errors**
    ```bash
    # Ensure you're in the correct directory
-   cd financial-copilot
+   cd Financial_Copilot
    
    # Reinstall dependencies
    pip install -r requirements.txt
@@ -256,6 +255,15 @@ Based on our testing with 15 complex queries:
    pip install faiss-cpu --no-deps
    ```
 
+5. **API Server Not Found**
+   ```bash
+   # Start the API server first
+   python launch_api.py
+   
+   # Then run the interactive launcher
+   python interactive_launcher.py
+   ```
+
 ### Platform-Specific Notes
 
 - **Windows**: Use CPU-only PyTorch and check FAISS compatibility
@@ -264,7 +272,7 @@ Based on our testing with 15 complex queries:
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions! Please feel free to submit issues and pull requests.
 
 ### Development Setup
 
@@ -294,9 +302,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/financial-copilot/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/financial-copilot/discussions)
-- **Email**: your-email@example.com
+- **Issues**: [GitHub Issues](https://github.com/PBhat07/Financial_Copilot/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/PBhat07/Financial_Copilot/discussions)
 
 ## 🗺️ Roadmap
 
