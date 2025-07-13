@@ -1,0 +1,49 @@
+# Financial Copilot - Core Dependencies
+# Core LangChain Framework
+langchain>=0.3.26,<0.4.0
+langchain-core>=0.3.66,<0.4.0
+langchain-community>=0.3.26,<0.4.0
+langchain-google-genai>=2.1.5,<3.0.0
+langchain-huggingface>=0.0.3,<1.0.0
+langchain-anthropic>=0.1.0,<1.0.0
+
+# LLM Backends
+transformers>=4.41.2,<5.0.0
+# PyTorch - Install appropriate version for your platform
+# Windows: pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Linux/Mac: pip install torch
+torch>=2.3.0,<3.0.0
+
+# RAG Components
+faiss-cpu>=1.11.0,<2.0.0
+sentence-transformers>=2.7.0,<3.0.0
+
+# Document Processing
+PyPDF2>=3.0.0,<4.0.0
+python-docx>=1.1.0,<2.0.0
+
+# Web Framework & API
+fastapi>=0.101.0,<1.0.0
+uvicorn>=0.22.0,<1.0.0
+pyngrok>=7.0.0,<8.0.0
+
+# HTTP & Data Processing
+requests>=2.32.4,<3.0.0
+pandas>=2.0.0,<3.0.0
+numpy>=1.25.0,<1.26.0
+
+# Environment & Configuration
+python-dotenv>=1.1.1,<2.0.0
+pydantic>=2.0.0,<3.0.0
+
+# LLM Providers
+openai>=1.91.0,<2.0.0
+google-api-core>=2.25.1,<3.0.0
+google-auth>=2.40.3,<3.0.0
+proto-plus>=1.26.1,<2.0.0
+protobuf>=6.31.1,<7.0.0
+
+# Development & Testing (Optional)
+pytest>=7.0.0,<8.0.0
+black>=23.0.0,<24.0.0
+flake8>=6.0.0,<7.0.0
